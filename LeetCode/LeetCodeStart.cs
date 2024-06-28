@@ -1,6 +1,6 @@
 ﻿namespace LeetCode;
 
-class Program
+class LeetCodeStart
 {
     static void Main(string[] args)
     {
