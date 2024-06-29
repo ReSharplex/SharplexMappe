@@ -1,8 +1,13 @@
-﻿namespace LeetCode;
+﻿using LeetCode.Managers;
 
-public abstract class Exercise
+namespace LeetCode;
+
+public abstract class Exercise(int id)
 {
-    public int Id;
-    
-    public abstract void Print();
+    public int Id = id;
+
+    public virtual void Print()
+    {
+        PrinterManager.PrintId(id);
+    }
 }

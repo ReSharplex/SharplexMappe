@@ -1,23 +1,31 @@
-﻿namespace LeetCode.Exercises;
+﻿using LeetCode.Managers;
 
-internal class Exercise1 : Exercise
+namespace LeetCode.Exercises;
+
+public class Exercise1() : Exercise(1)
 {
-    public Exercise1()
+    private int[] TwoSum(int[] nums, int target)
     {
-        Id = 1;
+        for (int i = 0; i < nums.Length - 1; i++)
+        {
+            var first = nums[i];
+
+            for (int l = nums.Length - 1; l > i; l--)
+            {
+                var second = nums[l];
+                
+                if (first + second == target) return [i, l];
+            }
+        }
+
+        return [];
     }
     
     public override void Print()
     {
-    }
+        base.Print();
 
-    private int[] TwoSum(int[] nums, int target)
-    {
-        for (int i = 0; i < nums.Length; i++)
-        {
-            var a = 0;
-        }
-
-        return null;
+        var a = TwoSum([3,2,3], 6);
+        a.Print();
     }
 }
