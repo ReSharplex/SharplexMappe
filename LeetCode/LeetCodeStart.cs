@@ -10,6 +10,6 @@ class LeetCodeStart
         LeetCodeManager manager = new LeetCodeManager();
         manager.RegisterExercise(new Exercise1());
         
-        manager.Run();
+        manager.RunLast();
     }
 }
