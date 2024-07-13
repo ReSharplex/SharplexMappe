@@ -11,6 +11,7 @@ class LeetCodeStart
         manager.RegisterExercise(new Exercise1());
         manager.RegisterExercise(new Exercise2());
         manager.RegisterExercise(new Exercise3());
+        manager.RegisterExercise(new Exercise4());
         
         manager.RunLast();
     }
