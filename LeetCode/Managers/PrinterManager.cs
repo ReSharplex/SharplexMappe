@@ -17,6 +17,17 @@ public static class PrinterManager
         ResetColor();
         ResetLine();
     }
+    
+    public static void Print<TSource>(TSource source)
+    {
+        SetColor(ConsoleColor.Yellow);
+
+        Write("Result: ");
+        Write($"{source}, ");
+        
+        ResetColor();
+        ResetLine();
+    }
 
     public static void NotFound()
     {
